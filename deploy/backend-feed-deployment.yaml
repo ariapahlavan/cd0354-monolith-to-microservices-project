@@ -15,15 +15,15 @@ spec:
         service: backend-feed
     spec:
       containers:
-        - name: udagram-api-feed
-          image: ariapahlavan/udagram-api-feed
+        - name: backend-feed
+          image: ariapahlavan/udagram-api-feed:v2
           imagePullPolicy: Always
           resources:
             requests:
-              memory: "64Mi"
-              cpu: "250m"
+              memory: "1Gi"
+              cpu: "400m"
             limits:
-              memory: "1024Mi"
+              memory: "2Gi"
               cpu: "500m"
           ports:
             - containerPort: 8080
